@@ -15,7 +15,9 @@ const io = new Server(server, {
     methods: ["GET", "POST"],
   },
 });
-
+app.get("/", function (req, res) {
+  res.send("Hello from the root application URL");
+});
 io.on("connection", (socket) => {
   console.log("user connected:", socket.id);
 
@@ -30,6 +32,9 @@ io.on("connection", (socket) => {
   socket.on("disconnect", () => {
     console.log("user disconnected", socket.id);
   });
+});
+app.get("/https://my-chat-app-production.up.railway.app/", function (req, res) {
+  res.send("Hello from the root application URL");
 });
 
 server.listen(port, () => {
