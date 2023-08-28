@@ -11,7 +11,7 @@ const port = 3001;
 
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173",
+    origin: "https://ibrahims-chat-app.netlify.app/",
     methods: ["GET", "POST"],
   },
 });
