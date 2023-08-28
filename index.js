@@ -11,7 +11,7 @@ const port = process.env.PORT;
 
 const io = new Server(server, {
   cors: {
-    origin: "https://ibrahims-chat-app.netlify.app/",
+    origin: "https://ibrahims-chat-app.netlify.app",
     methods: ["GET", "POST"],
   },
 });
